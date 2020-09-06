@@ -90,7 +90,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHold
             super(itemView);
 
             quoteText=itemView.findViewById(R.id.quoteText);
-            writerName=itemView.findViewById(R.id.writerName);
+           writerName=itemView.findViewById(R.id.writerName);
             imageView=itemView.findViewById(R.id.imageView);
             cardView=itemView.findViewById(R.id.cardView);
 

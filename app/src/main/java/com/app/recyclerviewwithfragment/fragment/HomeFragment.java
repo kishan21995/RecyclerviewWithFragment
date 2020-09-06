@@ -58,7 +58,7 @@ public class HomeFragment extends Fragment {
 
 
         recyclerView = view.findViewById(R.id.recyclerview);
-        View cardView =view. findViewById(R.id.cardView);
+     View cardView =view. findViewById(R.id.cardView);
         recyclerViewOperation();
 
         return view;
