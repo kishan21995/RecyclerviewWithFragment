@@ -12,4 +12,9 @@
     <string name="recents">Recents</string>
     <string name="hours">Hours</string>
     <string name="title">Title</string>
+
+    <string name="problem">""The problem is not the the problem. The problem is your attitude about the problem" "</string>
+    <string name="jack"> -- Jack Sparrow</string>
+    <string name="Pirates">Pirates of the Caribbean</string>
+
 </resources>

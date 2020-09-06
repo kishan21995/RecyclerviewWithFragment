@@ -13,5 +13,9 @@
 
     <color name="yellow_color">#ffb43d</color>
 
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="green">#3FF312</color>
+
 
 </resources>

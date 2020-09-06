@@ -1,76 +1,61 @@
-package com.app.recyclerviewwithfragment.fragment;
+package com.app.recyclerviewwithfragment.activity;
 
-import android.content.Intent;
-import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
+import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.app.recyclerviewwithfragment.R;
-import com.app.recyclerviewwithfragment.activity.ShareDataActivity;
 import com.app.recyclerviewwithfragment.adapter.MoviesAdapter;
 import com.app.recyclerviewwithfragment.model.MovieData;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
-
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link HomeFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class HomeFragment extends Fragment {
+public class ShareDataActivity extends AppCompatActivity {
 
     List<MovieData> moviesQuotesList = new ArrayList<>();
     RecyclerView recyclerView;
+    private TextView quote,writer;
     private MoviesAdapter moviesQuotesListAdapter;
 
-    //private AppBarConfiguration mAppBarConfiguration;
-
-    public static HomeFragment newInstance() {
-        HomeFragment fragment = new HomeFragment();
-        return fragment;
-    }
-
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-    }
+        setContentView(R.layout.activity_share_data);
+
+        //clickListner
+        quote = findViewById(R.id.shared_qutoes);
+        writer = findViewById(R.id.shared_writer);
 
 
+        recyclerView = findViewById(R.id.recyclerView1);
+        View cardView = findViewById(R.id.cardView);
 
 
+        Bundle bundle = getIntent().getExtras();
+        final String dialog = bundle.getString("Text");
+        String w_nmae = bundle.getString("Writtername");
 
+        quote.setText(dialog);
+        writer.setText(w_nmae);
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_home, container, false);
-
-
-        recyclerView = view.findViewById(R.id.recyclerview);
-        View cardView =view. findViewById(R.id.cardView);
+        //method
         recyclerViewOperation();
 
-        return view;
     }
 
     public void recyclerViewOperation() {
 
         //  moviesQuotesListAdapter = new MoviesQuotesListAdapter(moviesQuotesList);
 
-        MoviesAdapter moviesQuotesListAdapter= new MoviesAdapter(moviesQuotesList, getContext());
+        MoviesAdapter moviesQuotesListAdapter= new MoviesAdapter(moviesQuotesList, this);
 
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext());
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
@@ -82,15 +67,14 @@ public class HomeFragment extends Fragment {
             MovieData movieData = new MovieData();
             movieData.setQuote("This is dummy Quetes This is dummy Quetes This is dummy Quetes This is dummy QuetesThis is dummy Quetes"+i);
             movieData.setWriter(" -- Raj kumar"+i);
-
             moviesQuotesList.add(movieData);
         }
 
 
-        moviesQuotesListAdapter.setmoviesQuotesListInterface(new MoviesAdapter.MoviesQuotesListInterface() {
+  /*      moviesQuotesListAdapter.setmoviesQuotesListInterface(new MoviesAdapter.MoviesQuotesListInterface() {
             @Override
             public void moviesQuotesListItem(int position) {
-                Intent i = new Intent(getActivity(), ShareDataActivity.class);
+                Intent i = new Intent(MainActivity.this,ShareDataActivity.class);
                 i.addFlags(FLAG_ACTIVITY_NEW_TASK);
                 i.putExtra("Text", moviesQuotesList.get(position).getQuote());
                 i.putExtra("Writtername", moviesQuotesList.get(position).getWriter());
@@ -98,7 +82,7 @@ public class HomeFragment extends Fragment {
                 startActivity(i);
 
             }
-        });
+        });*/
 
     }
 
