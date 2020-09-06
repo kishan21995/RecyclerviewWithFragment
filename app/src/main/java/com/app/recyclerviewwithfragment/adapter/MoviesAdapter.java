@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -51,7 +52,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHold
         holder.writerName.setText(moviesdata.getWriter());
 
 
-        holder.cardView.setOnClickListener(new View.OnClickListener() {
+        holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (moviesQuotesListInterface != null) {
@@ -85,6 +86,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHold
         private TextView quoteText,writerName;
         private ImageView imageView;
         private CardView cardView;
+        private LinearLayout linearLayout;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -92,7 +94,9 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHold
             quoteText=itemView.findViewById(R.id.quoteText);
            writerName=itemView.findViewById(R.id.writerName);
             imageView=itemView.findViewById(R.id.imageView);
-            cardView=itemView.findViewById(R.id.cardView);
+            linearLayout=itemView.findViewById(R.id.linear);
+
+            //cardView=itemView.findViewById(R.id.cardView);
 
 
         }
