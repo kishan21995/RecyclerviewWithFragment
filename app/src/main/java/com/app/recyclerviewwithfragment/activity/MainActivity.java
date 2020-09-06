@@ -1,4 +1,4 @@
-package com.app.recyclerviewwithfragment;
+package com.app.recyclerviewwithfragment.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -9,6 +9,10 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.app.recyclerviewwithfragment.fragment.HomeFragment;
+import com.app.recyclerviewwithfragment.fragment.MusicFragment;
+import com.app.recyclerviewwithfragment.R;
+import com.app.recyclerviewwithfragment.fragment.SearchFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {

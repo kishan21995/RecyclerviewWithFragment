@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llParent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dp_16"
+    android:layout_marginTop="@dimen/dp_8"
+    android:layout_marginRight="@dimen/dp_16"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/yellow_transparent_border_rounded_corner"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/llTopVIew"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_4"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/llStatusView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginRight="@dimen/dp_8"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/llBottomVIew"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+              <!--  <com.app.olympus.widget.RoundRectCornerImageView
+                    android:id="@+id/ivInboximg"
+                    android:layout_width="@dimen/dp_120"
+                    android:layout_height="@dimen/dp_120"
+                    android:layout_gravity="center_vertical"
+                    app:roundedCorners="all"
+                    app:cornerRadius="@dimen/dp_4"
+                    android:contentDescription="Image"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/placeholder_inbox" />-->
+
+                <ImageView
+                    android:src="@drawable/ic_launcher_background"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/itemImgg"
+                    />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <!--<com.app.olympus.widget.VoiceTextView
+                        android:id="@+id/tvInboxMailDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:text="XX/XX/XX"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_12"
+                        app:fontName="@string/encode_sans_normal_regular" />-->
+
+                  <!--  <com.app.olympus.widget.VoiceTextView
+                        android:id="@+id/tvInboxHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvInboxMailDate"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:text="Launch Power Spiral"
+                        android:textColor="@color/yellow_color"
+                        android:textSize="@dimen/sp_12"
+                        app:fontName="@string/encode_normal_bold" />-->
+
+                 <!--   <com.app.olympus.widget.VoiceTextView
+                        android:id="@+id/tvInboxDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvInboxHeading"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:minHeight="@dimen/dp_30"
+                        android:text="@string/loremtext"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_10"
+                        app:fontName="@string/encode_sans_normal_regular" />-->
+
+                  <!--  <com.app.olympus.widget.VoiceTextView
+                        android:id="@+id/tvShowDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvInboxDesc"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:text="Show Details +"
+                        android:textAllCaps="true"
+                        android:textColor="@color/yellow_color"
+                        android:textSize="@dimen/sp_10"
+                        app:fontName="@string/encode_normal_bold" />-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/itemNamee"
+                        android:text="name"
+                        android:textSize="22dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginTop="2dp"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+   <!-- <com.app.olympus.widget.RoundRectCornerImageView
+        android:visibility="invisible"
+        android:id="@+id/ivNewIcon"
+
+        app:roundedCorners="topRight"
+        app:cornerRadius="@dimen/dp_8"
+        android:src="@drawable/new_icon"
+        android:layout_width="@dimen/dp_35"
+        android:layout_height="@dimen/dp_35" />-->
+
+</LinearLayout>

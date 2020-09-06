@@ -1,4 +1,4 @@
-package com.app.recyclerviewwithfragment;
+package com.app.recyclerviewwithfragment.model;
 
 public class Model {
 

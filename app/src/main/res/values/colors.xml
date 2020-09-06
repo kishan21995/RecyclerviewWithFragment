@@ -9,4 +9,9 @@
     <color name="color_black">#000000</color>
     <color name="color_white">#ffffff</color>
 
+    <color name="transparent_back_light_color">#88000000</color>
+
+    <color name="yellow_color">#ffb43d</color>
+
+
 </resources>
