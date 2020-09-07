@@ -80,8 +80,10 @@ public class HomeFragment extends Fragment {
 
         for (int i =0 ; i<100; i++){
             MovieData movieData = new MovieData();
-            movieData.setQuote("This is dummy Quetes This is dummy Quetes This is dummy Quetes This is dummy QuetesThis is dummy Quetes"+i);
-            movieData.setWriter(" -- Raj kumar"+i);
+            movieData.setQuote("9th Live Traning Program " +
+                    "on Youtube Basic Features and FAQs of " +
+                    "Olympus Insufflator"+i);
+            movieData.setWriter(i+" Views");
 
             moviesQuotesList.add(movieData);
         }
