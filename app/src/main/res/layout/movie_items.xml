@@ -3,58 +3,102 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:id="@+id/linear"
+    android:gravity="center"
     android:layout_margin="@dimen/dp_10"
     android:background="@drawable/yellow_transparent_border_rounded_corner"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="160dp">
 
 
 
-
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_margin="@dimen/dp_10"
+    android:layout_height="120dp">
 
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_marginTop="@dimen/dp_20"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@color/color_black"
+                android:layout_width="150dp"
+                android:gravity="center"
+                android:layout_height="120dp">
+
+
 
             <ImageView
                 android:id="@+id/imageView"
                 android:background="@drawable/bg"
-                android:layout_marginLeft="@dimen/dp_10"
-                android:layout_width="120dp"
-                android:layout_height="120dp">
+                android:layout_width="150dp"
+                android:layout_height="100dp">
 
 
             </ImageView>
 
+            </LinearLayout>
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="@dimen/dp_10"
+    android:layout_marginRight="@dimen/dp_10"
+    android:layout_height="120dp">
+
             <TextView
                 android:id="@+id/quoteText"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="@dimen/dp_10"
                 android:textStyle="bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_toEndOf="@+id/profile_image"
-                android:layout_toRightOf="@+id/profile_image"
                 android:text="This is dummy Quetes This is dummy Quedummy QuetesThis is dummy Quetes"
                 android:textColor="@color/white" />
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/writerName"
+                android:textColor="@color/white"
+                android:layout_toRightOf="@id/writerNamee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textSize="14dp"
+                android:layout_marginLeft="@dimen/dp_50"
+               android:text="64 Views"
+                />
+        <TextView
+            android:id="@+id/writerNamee"
+            android:textColor="@color/white"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:text="03 Sep 2020"
+          />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
 
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/writerName"
-            android:layout_gravity="end"
-            android:textColor="@color/white"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="--Raj Kumar"
-            android:padding="@dimen/dp_10"/>
+</LinearLayout>
+
+
 
 
 
