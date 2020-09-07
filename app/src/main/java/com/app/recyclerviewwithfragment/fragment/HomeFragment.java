@@ -78,7 +78,7 @@ public class HomeFragment extends Fragment {
         recyclerView.setAdapter(moviesQuotesListAdapter);
 
 
-        for (int i =0 ; i<100; i++){
+        for (int i =0 ; i<10; i++){
             MovieData movieData = new MovieData();
             movieData.setQuote("9th Live Traning Program " +
                     "on Youtube Basic Features and FAQs of " +
