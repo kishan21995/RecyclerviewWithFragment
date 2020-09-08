@@ -13,19 +13,19 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.recyclerviewwithfragment.R;
-import com.app.recyclerviewwithfragment.model.MovieData;
+import com.app.recyclerviewwithfragment.model.YoutubeListData;
 
 import java.util.List;
 
 
 
-public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHolder> {
-    private List<MovieData> quoteListItem;
+public class YoutubeListAdapter extends RecyclerView.Adapter<YoutubeListAdapter.MyViewHolder> {
+    private List<YoutubeListData> quoteListItem;
     private Context context;
     private MoviesQuotesListInterface moviesQuotesListInterface;///
 
 
-    public MoviesAdapter(List<MovieData> quoteListItem, Context context) {
+    public YoutubeListAdapter(List<YoutubeListData> quoteListItem, Context context) {
         this.quoteListItem = quoteListItem;
         this.context = context;
     }
@@ -46,7 +46,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHold
     public void onBindViewHolder(@NonNull final MyViewHolder holder, int position) {
 
 
-        final MovieData moviesdata =quoteListItem.get(position);
+        final YoutubeListData moviesdata =quoteListItem.get(position);
 
         holder. quoteText.setText(moviesdata.getQuote());
         holder.writerName.setText(moviesdata.getWriter());

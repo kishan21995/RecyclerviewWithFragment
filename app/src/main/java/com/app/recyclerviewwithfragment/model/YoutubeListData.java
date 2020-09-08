@@ -1,6 +1,6 @@
 package com.app.recyclerviewwithfragment.model;
 
-public class MovieData {
+public class YoutubeListData {
 
 
 

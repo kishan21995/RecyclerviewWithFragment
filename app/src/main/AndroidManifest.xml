@@ -11,8 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".activity.ShareDataActivity"></activity>
-        <activity android:name=".activity.YoutubeActivity" />
+        <activity android:name=".activity.YoutubeViewActivity"></activity>
+        <activity android:name=".activity.DataActivity" />
         <activity
             android:name=".activity.MainActivity"
             android:screenOrientation="portrait">

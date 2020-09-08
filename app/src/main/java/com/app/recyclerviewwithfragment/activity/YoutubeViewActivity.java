@@ -1,22 +1,13 @@
 package com.app.recyclerviewwithfragment.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 
 import com.app.recyclerviewwithfragment.R;
-import com.app.recyclerviewwithfragment.adapter.MoviesAdapter;
-import com.app.recyclerviewwithfragment.model.MovieData;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class ShareDataActivity extends AppCompatActivity {
+public class YoutubeViewActivity extends AppCompatActivity {
 
 
     private TextView quote,writer;
@@ -24,7 +15,7 @@ public class ShareDataActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_share_data);
+        setContentView(R.layout.activity_youtube_view);
 
         //clickListner
         quote = findViewById(R.id.shared_qutoes);

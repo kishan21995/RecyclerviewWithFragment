@@ -13,9 +13,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.app.recyclerviewwithfragment.R;
-import com.app.recyclerviewwithfragment.activity.ShareDataActivity;
-import com.app.recyclerviewwithfragment.adapter.MoviesAdapter;
-import com.app.recyclerviewwithfragment.model.MovieData;
+import com.app.recyclerviewwithfragment.activity.YoutubeViewActivity;
+import com.app.recyclerviewwithfragment.adapter.YoutubeListAdapter;
+import com.app.recyclerviewwithfragment.model.YoutubeListData;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,9 +29,9 @@ import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
  */
 public class HomeFragment extends Fragment {
 
-    List<MovieData> moviesQuotesList = new ArrayList<>();
+    List<YoutubeListData> moviesQuotesList = new ArrayList<>();
     RecyclerView recyclerView;
-    private MoviesAdapter moviesQuotesListAdapter;
+    private YoutubeListAdapter moviesQuotesListAdapter;
 
     //private AppBarConfiguration mAppBarConfiguration;
 
@@ -68,7 +68,7 @@ public class HomeFragment extends Fragment {
 
         //  moviesQuotesListAdapter = new MoviesQuotesListAdapter(moviesQuotesList);
 
-        MoviesAdapter moviesQuotesListAdapter= new MoviesAdapter(moviesQuotesList, getContext());
+        YoutubeListAdapter moviesQuotesListAdapter= new YoutubeListAdapter(moviesQuotesList, getContext());
 
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(mLayoutManager);
@@ -79,7 +79,7 @@ public class HomeFragment extends Fragment {
 
 
         for (int i =0 ; i<10; i++){
-            MovieData movieData = new MovieData();
+            YoutubeListData movieData = new YoutubeListData();
             movieData.setQuote("9th Live Traning Program " +
                     "on Youtube Basic Features and FAQs of " +
                     "Olympus Insufflator"+i);
@@ -89,10 +89,10 @@ public class HomeFragment extends Fragment {
         }
 
 
-        moviesQuotesListAdapter.setmoviesQuotesListInterface(new MoviesAdapter.MoviesQuotesListInterface() {
+        moviesQuotesListAdapter.setmoviesQuotesListInterface(new YoutubeListAdapter.MoviesQuotesListInterface() {
             @Override
             public void moviesQuotesListItem(int position) {
-                Intent i = new Intent(getActivity(), ShareDataActivity.class);
+                Intent i = new Intent(getActivity(), YoutubeViewActivity.class);
                 i.addFlags(FLAG_ACTIVITY_NEW_TASK);
                 i.putExtra("Text", moviesQuotesList.get(position).getQuote());
                 i.putExtra("Writtername", moviesQuotesList.get(position).getWriter());

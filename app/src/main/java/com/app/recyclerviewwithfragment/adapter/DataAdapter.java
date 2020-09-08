@@ -14,7 +14,7 @@ import com.app.recyclerviewwithfragment.model.Model;
 
 import java.util.List;
 
-public class YoutubeAdapter extends RecyclerView.Adapter<YoutubeAdapter.ViewHolder> {
+public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
 
     List<Model> itemList1;
 
@@ -24,7 +24,7 @@ public class YoutubeAdapter extends RecyclerView.Adapter<YoutubeAdapter.ViewHold
  /*   private SellingListInterface sellingListInterface;*/
 
 
-    public YoutubeAdapter(List<Model>itemList) {
+    public DataAdapter(List<Model>itemList) {
 
         this.itemList1=itemList;
 
@@ -34,8 +34,8 @@ public class YoutubeAdapter extends RecyclerView.Adapter<YoutubeAdapter.ViewHold
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.row_youtube_item,parent,false);
-         ViewHolder viewHolder=new YoutubeAdapter.ViewHolder(view);
+        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.row_data_item,parent,false);
+         ViewHolder viewHolder=new DataAdapter.ViewHolder(view);
         return viewHolder;
 
     }

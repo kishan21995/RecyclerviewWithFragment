@@ -1,6 +1,5 @@
 package com.app.recyclerviewwithfragment.fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -12,15 +11,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.app.recyclerviewwithfragment.R;
-import com.app.recyclerviewwithfragment.activity.YoutubeActivity;
-import com.app.recyclerviewwithfragment.adapter.ItemAdapter;
-import com.app.recyclerviewwithfragment.adapter.YoutubeAdapter;
+import com.app.recyclerviewwithfragment.adapter.DataAdapter;
 import com.app.recyclerviewwithfragment.model.Model;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,7 +56,7 @@ public class SearchFragment extends Fragment {
         recyclerView=view.findViewById(R.id.recycleryoutube);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-         recyclerView.setAdapter(new YoutubeAdapter(initData()));
+         recyclerView.setAdapter(new DataAdapter(initData()));
 
    /*    YoutubeAdapter.setSellingListInterface(new YoutubeAdapter.SellingListInterface() {
             @Override
